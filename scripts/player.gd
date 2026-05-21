@@ -178,7 +178,7 @@ func _on_item_picked_up(item_name): #this entire function feels very unoptimized
 		else:
 			last_item = touched_item_name #this should trigger for oil and lavender, but NOT furnace!
 
-func _on_enter_sauna(args):
+func _on_enter_sauna():
 	place_name = "sauna"
 
 func _on_enter_cave(args):
@@ -196,5 +196,5 @@ func _on_enter_casino(args):
 func _on_enter_store(args):
 	place_name = "store"		 
 
-func _on_exit_place(args):
+func _on_exit_place(args = null):
 	place_name = ""

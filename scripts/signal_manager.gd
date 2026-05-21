@@ -129,12 +129,25 @@ func _on_player_begin_building():
 
 	$SecondLineDialogueWindow.show() #having them be 2 completely separate windows seems bad, i may change it later
 	$SecondLineDialogueWindow.initiate()
-	var pole = $PoleCharacter
-	$Sauna.body_entered.connect(player._on_enter_sauna)
-	$Sauna.body_entered.connect(pole._on_enter_sauna)
-	$Sauna.body_exited.connect(player._on_exit_place)
-	$Sauna.body_exited.connect(pole._on_exit_place)
+	#var pole = $PoleCharacter
+	# $Sauna.body_entered.connect(player._on_enter_sauna)
+	# $Sauna.body_entered.connect(pole._on_enter_sauna)
+	# $Sauna.body_exited.connect(player._on_exit_place)
+	# $Sauna.body_exited.connect(pole._on_exit_place)
+	$Sauna.body_entered.connect(_on_body_enter_sauna)
+	$Sauna.body_exited.connect(_on_body_exit_sauna)
 
+func _on_body_enter_sauna(body : Node2D):
+	if body.name == "FinnCharacter":
+		player._on_enter_sauna()
+	else:
+		$PoleCharacter._on_enter_sauna()
+
+func _on_body_exit_sauna(body : Node2D):
+	if body.name == "FinnCharacter":
+		player._on_exit_place()
+	else:
+		$PoleCharacter._on_exit_place()
 func place_item(item_name):
 	match item_name:
 		"Furnace":

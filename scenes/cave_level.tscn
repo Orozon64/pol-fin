@@ -57,3 +57,16 @@ position = Vector2(976, 1000)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartingPoint" unique_id=36156195]
 shape = SubResource("RectangleShape2D_e2lr5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2121871747]
+
+[node name="ObjectiveLabel" type="Label" parent="CanvasLayer" unique_id=1800822705]
+offset_top = 1.0
+offset_right = 464.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 24
+text = "Objective: pick up wooden logs"

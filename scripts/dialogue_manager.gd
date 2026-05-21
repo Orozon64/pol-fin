@@ -158,17 +158,20 @@ func _process(delta:float) -> void:
 				
 	
 		
-
-func _on_player_select_answer_a():
+func disable_buttons():
 	$AnswerAButton.disabled = true
+	$AnswerBButton.disabled = true
+	$AnswerCButton.disabled = true
+func _on_player_select_answer_a():
+	disable_buttons()
 	answer_id = 0
 	verify_answer()
 func _on_player_select_answer_b():
-	$AnswerBButton.disabled = true
+	disable_buttons()
 	answer_id = 1
 	verify_answer()
 func _on_player_select_answer_c():
-	$AnswerCButton.disabled = true
+	disable_buttons()
 	answer_id = 2
 	verify_answer()
 

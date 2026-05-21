@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/FinlandBackground.mp3-3b16cd4545fdfbd9639f211
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

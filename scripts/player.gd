@@ -136,7 +136,7 @@ func _process(delta: float) -> void:
 				if touched_item_name == "Beer":
 					get_tree().change_scene_to_file("res://scenes/flying.tscn")
 			"casino":
-				if last_item == "Sauna oil":
+				if last_item == "Sauna oil" and money < 250:
 					save_game()
 					get_tree().change_scene_to_file("res://scenes/casino_minigame.tscn")
 			"store":

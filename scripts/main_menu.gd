@@ -32,10 +32,11 @@ func _show_credits():
 	$CenterContainer/VBoxContainer/PlayButton.hide()
 	$CenterContainer/VBoxContainer/CreditsButton.hide()
 	$CenterContainer/VBoxContainer/ReturnButton.show()
+	$CenterContainer/VBoxContainer/Label.show()
 	$CenterContainer/VBoxContainer/Label.text = "Programming: Ignacy Guminiak, Michał Wójtowicz, Zuzanna Dróżdż, Jan Kukier\nNetwork management: Jan Kukier, Jan Maciejewski, Jakub Klimowicz\nGraphic design: Michał Wójtowicz, Zuzanna Dróżdż, Jan Maciejewski\nAudio design: Jakub Klimowicz, Jan Sarnecki, Ignacy Guminiak\nProject leader: Jakub Klimowicz\nSpecial thanks to mechatronics team :)\n"
 	$CenterContainer/VBoxContainer/Label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 func _return_to_menu():
 	$CenterContainer/VBoxContainer/PlayButton.show()
 	$CenterContainer/VBoxContainer/CreditsButton.show()
 	$CenterContainer/VBoxContainer/ReturnButton.hide()
-	$CenterContainer/VBoxContainer/Label.text = "The Sauna Pact"
+	$CenterContainer/VBoxContainer/Label.hide()

@@ -27,12 +27,10 @@ tile_map_data = PackedByteArray("AAAKAAgABgAAAAAAAAAEAAgABgAAAAAAAAAEAAYABgAAAAA
 tile_set = ExtResource("1_br21b")
 
 [node name="Stones" parent="." unique_id=1981020031 instance=ExtResource("2_sfygl")]
-visible = false
 position = Vector2(1469, 258)
 script = ExtResource("3_hs0xw")
 
 [node name="FinnCharacter" parent="." unique_id=486509689 instance=ExtResource("3_m2ful")]
-visible = false
 position = Vector2(526, 606)
 
 [node name="WalkingSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1668349751]
